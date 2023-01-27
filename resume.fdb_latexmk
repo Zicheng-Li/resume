@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1674752841 "/Users/lizicheng/Desktop/resume/resume.tex" "resume.pdf" "resume" 1674752841
-  "/Users/lizicheng/Desktop/resume/resume.tex" 1674752840 5635 10a83604e05baeb2ec9ef79df4e25a1d ""
+["pdflatex"] 1674849056 "/Users/lizicheng/Desktop/resume/resume.tex" "resume.pdf" "resume" 1674849057
+  "/Users/lizicheng/Desktop/resume/resume.tex" 1674849056 5835 5f30074a689eb88aefb8fde75f9480d6 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/fontawesome5/fa5brands0.enc" 1622837620 2920 d63721872b8c77041b88e51b8f7c291d ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/fontawesome5/fa5free1.enc" 1622837620 3042 0e2b14b9be7d01075a4c4591d5d1781b ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/fontawesome5/fa5free2.enc" 1622837620 2906 e48aa7c95dea478a2e011bcb4f7878c9 ""
@@ -87,9 +87,9 @@
   "/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1647878959 4410336 7d30a02e9fa9a16d7d1f8d037ba69641 ""
   "/usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1667238807 2826448 5b171779ec5f6bb7c8e73fec10f35666 ""
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
-  "resume.aux" 1674752841 1338 d79517ea0e9bcba4716452d5c52d219e "pdflatex"
-  "resume.out" 1674752841 611 9792bf16763b95919bdb88cfa4f466e5 "pdflatex"
-  "resume.tex" 1674752840 5635 10a83604e05baeb2ec9ef79df4e25a1d ""
+  "resume.aux" 1674849057 1338 d79517ea0e9bcba4716452d5c52d219e "pdflatex"
+  "resume.out" 1674849057 611 9792bf16763b95919bdb88cfa4f466e5 "pdflatex"
+  "resume.tex" 1674849056 5835 5f30074a689eb88aefb8fde75f9480d6 ""
   (generated)
   "resume.aux"
   "resume.log"
