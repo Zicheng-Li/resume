@@ -1,3 +1,3 @@
 # resume
-## Zicheng's resume
+## Evan's resume
 [link to resume](resume.pdf)
