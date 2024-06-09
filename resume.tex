@@ -1,82 +1,210 @@
-\documentclass[letterpaper,12pt]{article}
+%-------------------------
+% Resume in Latex
+% Author : Gennadii Chursov
+% Based off of: https://github.com/sb2nov/resume and https://www.overleaf.com/latex/templates/jakes-resume/syzfjbzwjncs
+% License : MIT
+%------------------------
 
-\usepackage{url}
-\usepackage{parskip} 	
+\documentclass[letterpaper,11pt]{article}
 
-\RequirePackage{color}
-\usepackage[scale=0.9]{geometry}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
 \usepackage{tabularx}
+\input{glyphtounicode}
 
-\newcolumntype{C}{>{\centering\arraybackslash}X} 
-\usepackage{titlesec}				
 
-\titleformat{\section}{\Large\raggedright}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{8pt}{8pt}
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
 
-\usepackage[unicode, draft=false]{hyperref}
-\definecolor{linkcolour}{rgb}{0,0.2,0.6}
-\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
 
-\usepackage{fontawesome5}
-\usepackage{helvet}
-\renewcommand{\familydefault}{\sfdefault} 
-% \usepackage{fontspec}
-% \setmainfont{Carlito}
 
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 \begin{document}
-\pagestyle{empty} 
-% {\fontspec{Carlito:style=Bold} This is some bold text in Carlito.}
-% {\fontspec{Carlito:style=Italic} This is some italic text in Carlito.}
 
-\begin{tabularx}{\linewidth}{@{} C @{}}
-{\Huge{Evan Li}}   \\
-\small{Hamilton, ON} \\
-\href{https://github.com/Zicheng-Li}{\raisebox{-0.05\height}\faGithub\ Zicheng-Li} \ $|$ \ 
-\href{https://www.linkedin.com/in/evan-li-873078256/}{\raisebox{-0.05\height}\faLinkedin\ Evan-Li} \ $|$ \ 
-\href{https://zicheng-li.github.io/Personal-Web/}{\raisebox{-0.05\height}\faGlobe \ zicheng-li.com} \ $|$ \ 
-\href{mailto:li1276@mcmaster.ca}{\raisebox{-0.05\height}\faEnvelope \ li1276@mcmaster.ca} \ $|$ \ 
-\href{tel:+14376079699}{\raisebox{-0.05\height}\faMobile \ (+1) 437-607-9699} \\
-\end{tabularx}
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
 
+\begin{center}
+    \textbf{\Huge \scshape Evan Li} \\ \vspace{1pt}
+    \small {Toronto, ON} \\
+    Canadian Citizen $|$ 437-607-9699 $|$ \href{mailto:li1276@mcmaster.ca}{\underline{li1276@mcmaster.ca}} $|$ 
+    \href{https://zicheng-li.github.io/Personal-Web/}
+    {\underline{Evan-Li.com}} $|$
+    \href{https://www.linkedin.com/in/evan-li-873078256/}{\underline{linkedin.com/in/Evan-Li}} $|$
+    \href{https://github.com/Zicheng-Li}{\underline{github.com/Evan-Li}} 
+\end{center}
+
+
+%-----------EDUCATION-----------
 \section{Education}
-\begin{tabularx}{\linewidth}{@{}l X@{}}	
-\textbf{Bachelor of Applied Science (BASc), Computer Science, Co-op } &  \hfill \normalsize{September 2021 - April 2026} \\
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {McMaster University}{September 2021 - April 2026}
+      {Bachelor of Applied Science (BASc), Computer Science, Co-op}{ Hamilton, Canada}
+    \resumeItemListStart
+      \resumeItem{Maintained a high cumulative GPA of \textbf{3.8} throughout the duration of studies.}
+    \resumeItemListEnd
+  \resumeSubHeadingListEnd
 
-McMaster University &  \hfill Hamilton, Canada \\
-\end{tabularx}
-
-\hspace{0.3cm} $\bullet$ \hspace{1em}{\fontsize{10pt}{9pt}\selectfont Maintained a high cumulative GPA of \textbf{3.8} throughout the duration of studies.}
-
+%-----------EXPERIENCE-----------
 \section{Work Experience}
+  \resumeSubHeadingListStart
 
-\textbf{Software Engineer Intern} \hfill January 2024 - Present \\
-\textit{Ontario Power Generation} \hfill Bowmanville, Canada
-\vspace{0.25cm} \\
-\hspace{0.1cm} $\bullet$ \hspace{0.21em}Developed a full-stack web application using Angular and .NET, revolutionizing the nuclear operation team's dashboard, enhanced data visualization and access for power generation and crew metrics, reducing retrieval times from 10 minutes to instant. Significantly improved operational efficiency and achieved cost savings of over \$1M.\\ 
-% \hspace{0.1cm} $\bullet$ \hspace{0.35em}Employed Python and VBA to transform the equipment management process for the operation support team, resulting in a more efficient and streamlined workflow.\\
-\hspace{0.1cm} $\bullet$ \hspace{0.2em}Automated a manual 2-hour equipment check process to just 1 minute using Python, pandas, and openpyxl for data processing, achieving a 120-fold increase in operational efficiency with a user-friendly Tkinter interface.
+% -----------Multiple Positions Heading-----------
+   % \resumeSubSubheading
+   %  {Software Engineer I}{Oct 2014 - Sep 2016}
+   %  \resumeItemListStart
+   %     \resumeItem{Apache Beam}
+   %       {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+   %  \resumeItemListEnd
+   % \resumeSubHeadingListEnd
+%-------------------------------------------
 
-\textbf{Software Engineer Intern}  \hfill   July 2023 - August 2023 \\
-\textit{AXSource} \hfill Oakville, Canada
-\vspace{0.3cm}  
-\\\hspace{0.1cm} $\bullet$ \hspace{0.3em}Designed and implemented a multi-platform chatbot using Power Virtual Agent, seamlessly integrating with Microsoft Teams and web platforms; utilized Power Automate for business logic to automate the transfer of Invoice, New Customer, and Purchase Order Entry data to D365, enhancing customer data processing efficiency.\\
-\hspace{0.1cm} $\bullet$ \hspace{0.35em}Developed a mobile application using Power Apps, enabling users to capture images of items; integrated Azure's Computer Vision API for image detection, streamlining the asset recognition process. 
-% \hspace{0.1cm} $\bullet$  \hspace{1em}Leveraged Power Automate to relay image detection results to a chatbot for Fixed Asset Entry in D365, further automating and simplifying the customer data entry process. 
+    \resumeSubheading
+      {Software Engineer Intern}{January 2024 - Present}
+      {Ontario Power Generation}{Bowmanville, Canada}
+      \resumeItemListStart
+      \resumeItem{Developed a full-stack web application using Angular and ASP.NET, which revolutionized the nuclear operation team’s dashboard by integrating Microsoft Graph for personalized data views based on user authentication.}
+      \resumeItem{Displayed critical data including crew performance metrics, KPIs, and employee vacation details, all visualized with Chart.js.}
+      \resumeItem{Reduced data retrieval times from 10 minutes to instant, significantly improved operational efficiency and achieved cost savings of over \$1M.}
+      \resumeItem{Utilized Azure Repos for source code management and configured Azure Pipelines to automate builds and deployments to production environments.}
+        \resumeItem{Automated a manual 2-hour equipment check process to just 1 minute using Python, Pandas, and Openpyxl for data processing, achieving a 120-fold increase in operational efficiency with a user-friendly Tkinter interface.}
+    \resumeItemListEnd
+
+    \resumeSubheading
+      {Software Engineer Intern}{July 2023 - August 2023}
+      {AXSource}{Oakville, Canada}
+      \resumeItemListStart
+        \resumeItem{Designed and implemented a multi-platform chatbot using Power Virtual Agent, seamlessly integrating with Microsoft Teams and web platforms; utilized Power Automate for business logic to automate the transfer of Invoice, New Customer, and Purchase Order Entry data to D365, enhancing customer data processing efficiency.}
+        \resumeItem{Developed a mobile application using Power Apps, enabling users to capture images of items; integrated Azure's Computer Vision API for image detection, streamlining the asset recognition process. }
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
 \section{Projects}
+   \resumeSubHeadingListStart
+     \resumeProjectHeading
+         {\textbf{EL's online shop} $|$ \emph{Angular, SpringBoot, Tailwind, MySQL, Auth0, Stripe}}{July 2023 -- August 2023}
+         \resumeItemListStart
+           \resumeItem{Developed a full-stack e-commerce website using with SpringBoot serving a REST API with Angular as the frontend}
+            \resumeItem{Enhanced UI/UX with Bootstrap, Tailwind, PrimeNG and Angular Material}
+           \resumeItem{Implemented Okta’s Auth0 for secure user authentication and registration, ensuring a seamless user experience.}
+           \resumeItem{Incorporated Stripe for efficient payment processing, paired with a MySQL database for robust data
+management.}
+         \resumeItemListEnd
+   \resumeSubHeadingListEnd
 
-\textbf{EL's online shop} \hfill \href{https://youtu.be/q0_N9ydf67c}{Link to Demo} \hspace{0.2cm} \href{https://github.com/Zicheng-Li/Angular-ecommerce-frontend}{Link to GitHub}\\
-\hspace{0.1cm} $\bullet$ \hspace{0.35em}Developed a full-stack e-commerce website using Angular 16 and SpringBoot 3, enhanced with Bootstrap, Tailwind, PrimeNG and Angular Material for a dynamic UI/UX. \\
-\hspace{0.1cm} $\bullet$ \hspace{0.35em}Integrated Okta's Auth0 for secure user authentication and registration, ensuring a seamless user experience. \\ 
-\hspace{0.1cm} $\bullet$ \hspace{0.35em}Incorporated Stripe for efficient payment processing, paired with a MySQL database for robust data management.
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: HTML, CSS, JavaScript, TypeScript, Java, Python, C\#, SQL} \\
+     \textbf{Frameworks}{: Angular, React, SpringBoot, ASP.NET, Power Apps, Power Automate, Power BI} \\
+     \textbf{Developer Tools}{: Git, Azure Cloud, MSSQL, Maven/Gradle} \\
+     \textbf{Libraries}{: Tailwind, PrimeNG, Material UI, Chart.js, Pandas, Openpyxl, Tkinter, Microsoft Graph}
+    }}
+ \end{itemize}
 
-\section{Skills}
-\begin{tabularx}{\linewidth}{@{}l X@{}}
-\textbf{Languages/Tools}:  HTML \hspace{0.05cm} CSS \hspace{0.05cm} JavaScript \hspace{0.05cm} TypeScript \hspace{0.05cm} Java \hspace{0.05cm} Python \hspace{0.05cm} C\# \hspace{0.05cm} MSSQL \hspace{0.05cm} Git \hspace{0.19cm}Azure Cloud 
-\end{tabularx}
-
+%-----------Certifications-----------
 \section{Certifications}
-Microsoft Certified Azure AI Engineer Associate \hfill \href{https://learn.microsoft.com/en-us/users/zichengli-4388/credentials/8f80de9e7944a10}{Link to Certificate}\\
-Microsoft Certified Dynamics 365 Fundamentals (ERP)\hfill \href{https://learn.microsoft.com/en-us/users/zichengli-4388/credentials/5d28421aefedb4ec}{Link to Certificate}
+  \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Microsoft Certified Azure AI Engineer Associate} \\
+     \textit{\href{https://learn.microsoft.com/en-us/users/zichengli-4388/credentials/8f80de9e7944a10}{Link to Certificate}} \\
+    }}
+    \small{\item{
+     \textbf{Microsoft Certified Dynamics 365 Fundamentals (ERP)} \\
+    \textit{\href{https://learn.microsoft.com/en-us/users/zichengli-4388/credentials/5d28421aefedb4ec}{Link to Certificate}}
+    }}
+ \end{itemize}
+
+
+%-------------------------------------------
 \end{document}
