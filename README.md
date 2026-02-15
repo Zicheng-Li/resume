@@ -1,3 +1,3 @@
 # resume
 ## Evan's resume
-[Link to resume](resume.pdf)
+[Link to resume](Evan_Li_resume.pdf)
